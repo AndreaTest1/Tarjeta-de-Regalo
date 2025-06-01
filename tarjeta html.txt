@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta para el mejor ingeniero</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #40E0D0; /* Turquesa */
+      margin-bottom: 20px;
+    }
+
+    #mensaje, #regalo {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #40E0D0;
+      color: black;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    img {
+      max-width: 80%;
+      margin-top: 15px;
+      border: 2px solid white;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido, jugador 1</h1>
+  <button onclick="mostrarMensaje()">Iniciar tarjeta</button>
+
+  <div id="mensaje">
+    <p>"Porque los mejores ingenieros se merecen los mejores juegos"</p>
+    <button onclick="mostrarRegalo()">Mostrar regalo</button>
+  </div>
+
+  <div id="regalo">
+    <p>Aquí está tu regalo 🎁</p>
+    <!-- Agrega tu imagen aquí -->
+    <img src="Imagen Regalo.png" alt="Regalo">
+    <p>Código: XXXX-XXXX-XXXX</p>
+  </div>
+
+  <!-- Música de fondo (YouTube embed alternativo si no tienes mp3) -->
+  <audio id="musica" autoplay loop>
+    <source src="persona 5.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    function mostrarMensaje() {
+      document.querySelector("#mensaje").style.display = "block";
+      document.querySelector("button").style.display = "none";
+      document.getElementById("musica").play();
+    }
+
+    function mostrarRegalo() {
+      document.querySelector("#regalo").style.display = "block";
+    }
+  </script>
+</body>
+</html>
